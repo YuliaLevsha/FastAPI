@@ -21,7 +21,7 @@ services:
     volumes:
       - mongodb_data:/data/db
     env_file:
-      - .env
+      - src/.env
     networks:
       - custom
 
@@ -34,7 +34,7 @@ services:
     depends_on:
       - mongodb
     env_file:
-      - .env
+      - src/.env
     volumes:
       - ./src:/app
     networks:

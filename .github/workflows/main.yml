@@ -23,8 +23,23 @@ jobs:
       - name: Check
         uses: actions/checkout@v2
 
+      - name: create env file
+        run: echo "${{ secrets.ENV_FILE }}" > src/.env
+
       - name: set up docker
         run: docker-compose up -d --build
+
+      - name: pytest
+        run: docker-compose exec web pytest .
+
+      - name: black
+        run: black .
+
+      - name: mypy
+        run: mypy . --exclude venv
+
+      - name: flake8
+        run: flake8 --exclude venv
 
       - name: stop docker compose
         run: docker-compose down
