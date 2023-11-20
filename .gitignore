@@ -5,3 +5,5 @@
 .env
 
 *.lock
+
+.mypy_cache/
