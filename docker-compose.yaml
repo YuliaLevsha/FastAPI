@@ -1,0 +1,48 @@
+version: "3"
+
+services:
+  web:
+    container_name: "web"
+    image: nginx:alpine
+    depends_on:
+      - fastapi
+    ports:
+      - "8082:80"
+    volumes:
+      - ./app/conf.d:/etc/nginx/conf.d
+    networks:
+      - custom
+
+  mongodb:
+    container_name: mongodb
+    image: mongo:5.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    env_file:
+      - src/.env
+    networks:
+      - custom
+
+  fastapi:
+    build: .
+    command: sh -c "python -m uvicorn src.app:app --reload --host 0.0.0.0 --port 8000"
+    container_name: fastapi
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb
+    env_file:
+      - src/.env
+    volumes:
+      - ./src:/app
+    networks:
+      - custom
+
+networks:
+  custom:
+    driver: bridge
+
+volumes:
+  mongodb_data:

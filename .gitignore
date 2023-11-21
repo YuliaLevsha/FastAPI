@@ -1,0 +1,11 @@
+*.pyc
+
+.idea/
+
+.env
+
+*.lock
+
+.mypy_cache/
+
+actions-runner/
