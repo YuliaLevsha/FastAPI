@@ -7,3 +7,5 @@
 *.lock
 
 .mypy_cache/
+
+actions-runner/
