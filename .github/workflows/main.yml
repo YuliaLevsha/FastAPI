@@ -33,7 +33,9 @@ jobs:
         run: docker-compose exec -T fastapi pytest -vs
 
       - name: black
-        run: black .
+        run: |
+          pipenv install black
+          black .
 
       - name: mypy
         run: mypy . --exclude venv
