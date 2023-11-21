@@ -34,7 +34,7 @@ jobs:
 
       - name: black
         run: |
-          pipenv install black
+          pip install black
           black .
 
       - name: mypy
