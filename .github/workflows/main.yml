@@ -38,10 +38,14 @@ jobs:
           black .
 
       - name: mypy
-        run: mypy . --exclude venv
+        run: |
+          pip install mypy
+          mypy . --exclude venv
 
       - name: flake8
-        run: flake8 --exclude venv
+        run: |
+          pip install flake8
+          flake8 --exclude venv
 
       - name: stop docker compose
         run: docker-compose down
