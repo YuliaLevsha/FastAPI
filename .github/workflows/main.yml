@@ -30,7 +30,7 @@ jobs:
         run: docker-compose up -d --build
 
       - name: pytest
-        run: docker-compose exec web pytest .
+        run: docker-compose exec -T fastapi pytest -vs
 
       - name: black
         run: black .
