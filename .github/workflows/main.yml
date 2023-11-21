@@ -30,16 +30,22 @@ jobs:
         run: docker-compose up -d --build
 
       - name: pytest
-        run: docker-compose exec web pytest .
+        run: docker-compose exec -T fastapi pytest -vs
 
       - name: black
-        run: black .
+        run: |
+          pipenv install black
+          black .
 
       - name: mypy
-        run: mypy . --exclude venv
+        run: |
+          pip install mypy fastapi
+          mypy . --exclude venv
 
       - name: flake8
-        run: flake8 --exclude venv
+        run: |
+          pip install flake8
+          flake8 --exclude venv
 
       - name: stop docker compose
         run: docker-compose down
