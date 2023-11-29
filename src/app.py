@@ -1,9 +1,8 @@
 from fastapi import FastAPI
 
-
 app = FastAPI()
 
 
 @app.get("/")
-def hello():
+async def hello():
     return {"Say": "Hello"}
