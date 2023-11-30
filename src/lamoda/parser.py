@@ -55,7 +55,6 @@ class LamodaScraper:
                     'price': price[0].text,
                     'data_instance': datetime.now()}
             formatting = self.required_format(data)
-            print(formatting)
             result.append(formatting)
         return result
 
@@ -71,7 +70,6 @@ class LamodaScraper:
                 tasks = []
                 index = 1
                 while True:
-                    print("Page - " + str(index))
                     page = await self.get_page(url, index, session)
                     if len(await self.get_clothes(page)):
                         task = asyncio.ensure_future(self.get_clothes(page))
@@ -85,12 +83,4 @@ class LamodaScraper:
         start = time.time()
         asyncio.run(self.fetch_all(urls))
         finish = time.time()
-        print(str((finish-start) * 10**3) + "ms")
         return {'Status': 'good'}
-
-
-# urls = ['https://www.lamoda.by/c/4418/clothes-body/?page=']
-# loop = asyncio.new_event_loop()
-# asyncio.set_event_loop(loop)
-# lamoda = LamodaScraper()
-# lamoda.fetch_async(urls)

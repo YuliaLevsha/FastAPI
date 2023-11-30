@@ -1,8 +1,6 @@
 import requests
 import src.credentials as credentials
 from datetime import datetime
-import aiohttp
-import asyncio
 from pydantic import BaseModel
 
 
@@ -70,24 +68,12 @@ class TwitchScraper:
             }
             game_ = Games(**data)
             games.append(game_)
-        for game in games:
-            print(game)
         return games
 
     async def get_streams(self):
         streams = []
         list_users_id = []
         fields = {'first': 100}
-        # while True:
-        #     json_data = self.base_get_response('streams', fields)
-        #     for stream in json_data.get('data'):
-        #         streams.append(stream)
-        #         print(stream)
-        #     cursor = json_data['pagination']['cursor']
-        #     if cursor:
-        #         fields['after'] = cursor
-        #     else:
-        #         break
         json_data = await self.base_get_response('streams', fields)
         for stream in json_data.get('data'):
             data = {
@@ -100,8 +86,6 @@ class TwitchScraper:
             list_users_id.append(stream.get('user_id'))
             stream_ = Streams(**data)
             streams.append(stream_)
-        for stream in streams:
-            print(stream)
         return list_users_id, streams
 
     async def get_streamers(self):
@@ -119,10 +103,4 @@ class TwitchScraper:
             }
             streamer = Streamers(**data)
             streamers.append(streamer)
-        for streamer in streamers:
-            print(streamer)
         return streamers
-
-
-# twitch = TwitchScraper()
-# asyncio.run(twitch.base_get_response('games', {'id': 33214}))
