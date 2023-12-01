@@ -34,22 +34,15 @@ class LamodaScraper:
         html = await page.text()
         soup = BeautifulSoup(html, 'html.parser')
 
-        i = 0
-        for el in soup.select('.x-breadcrumbs__slide'):
-            all_a = el.find('a', {"class": 'x-link__secondaryLabel'})
-            if i == 1:
-                gender = all_a.text.strip()
-            elif i == 2:
-                category = all_a.text.strip()
-                break
-            i = i + 1
+        category = soup.select('.x-breadcrumbs__slide > a')[3]
+        gender = soup.select('.x-breadcrumbs__slide > a')[1]
 
         for clothes in soup.select('.x-product-card-description'):
             name = clothes.select('.x-product-card-description__product-name')
             brand = clothes.select('.x-product-card-description__brand-name')
             price = clothes.select('span')
-            data = {'category': category,
-                    'gender': gender,
+            data = {'category': category.text.strip(),
+                    'gender': gender.text.strip(),
                     'name': name[0].text,
                     'brand': brand[0].text,
                     'price': price[0].text,

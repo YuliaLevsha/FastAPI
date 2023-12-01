@@ -1,7 +1,6 @@
 import asyncio
 from unittest.mock import patch, MagicMock
 import aiohttp
-import requests
 from bs4 import BeautifulSoup
 
 from src.twitch.parser import TwitchScraper
