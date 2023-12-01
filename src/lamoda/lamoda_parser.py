@@ -1,5 +1,4 @@
 from datetime import datetime
-import time
 from fake_useragent import UserAgent
 import aiohttp
 import asyncio
@@ -16,14 +15,31 @@ class Clothes(BaseModel):
     data_instance: datetime
 
     def __str__(self):
-        return "Category: " + self.category + ", " + "gender: " + self.gender + ", " + "name: " + self.name + "" \
-                ", " + "brand: " + self.brand + ", " + "price: " + str(self.price) + ", " + "data: " + \
-                self.data_instance.strftime('%Y-%m-%d %H:%M')
+        return (
+            "Category: "
+            + self.category
+            + ", "
+            + "gender: "
+            + self.gender
+            + ", "
+            + "name: "
+            + self.name
+            + ""
+            ", "
+            + "brand: "
+            + self.brand
+            + ", "
+            + "price: "
+            + str(self.price)
+            + ", "
+            + "data: "
+            + self.data_instance.strftime("%Y-%m-%d %H:%M")
+        )
 
 
 class LamodaScraper:
     def __init__(self):
-        self.headers = {'User-Agent': UserAgent().chrome}
+        self.headers = {"User-Agent": UserAgent().chrome}
 
     async def get_page(self, url, num_page, session):
         page = await session.get(url + str(num_page), headers=self.headers)
@@ -32,28 +48,30 @@ class LamodaScraper:
     async def get_clothes(self, page):
         result = []
         html = await page.text()
-        soup = BeautifulSoup(html, 'html.parser')
+        soup = BeautifulSoup(html, "html.parser")
 
-        category = soup.select('.x-breadcrumbs__slide > a')[3]
-        gender = soup.select('.x-breadcrumbs__slide > a')[1]
+        category = soup.select(".x-breadcrumbs__slide > a")[3]
+        gender = soup.select(".x-breadcrumbs__slide > a")[1]
 
-        for clothes in soup.select('.x-product-card-description'):
-            name = clothes.select('.x-product-card-description__product-name')
-            brand = clothes.select('.x-product-card-description__brand-name')
-            price = clothes.select('span')
-            data = {'category': category.text.strip(),
-                    'gender': gender.text.strip(),
-                    'name': name[0].text,
-                    'brand': brand[0].text,
-                    'price': price[0].text,
-                    'data_instance': datetime.now()}
+        for clothes in soup.select(".x-product-card-description"):
+            name = clothes.select(".x-product-card-description__product-name")
+            brand = clothes.select(".x-product-card-description__brand-name")
+            price = clothes.select("span")
+            data = {
+                "category": category.text.strip(),
+                "gender": gender.text.strip(),
+                "name": name[0].text,
+                "brand": brand[0].text,
+                "price": price[0].text,
+                "data_instance": datetime.now(),
+            }
             formatting = self.required_format(data)
             result.append(formatting)
         return result
 
     def required_format(self, data):
-        float_price = data.get('price').split('р.')[0].replace(" ", "")
-        data['price'] = float(float_price)
+        float_price = data.get("price").split("р.")[0].replace(" ", "")
+        data["price"] = float(float_price)
         clothes = Clothes(**data)
         return clothes
 
@@ -73,7 +91,5 @@ class LamodaScraper:
                 await asyncio.gather(*tasks)
 
     def fetch_async(self, urls):
-        start = time.time()
         asyncio.run(self.fetch_all(urls))
-        finish = time.time()
-        return {'Status': 'good'}
+        return {"Status": "good"}
