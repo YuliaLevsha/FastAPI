@@ -12,6 +12,13 @@ mypy = "*"
 black = "*"
 pylint = "*"
 pytest = "*"
+fake-useragent = "*"
+aiohttp = "*"
+requests = "*"
+asyncio = "*"
+bs4 = "*"
+mock = "*"
+pytest-asyncio = "*"
 
 [dev-packages]
 

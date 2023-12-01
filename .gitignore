@@ -9,3 +9,7 @@
 .mypy_cache/
 
 actions-runner/
+
+src/credentials.py
+
+.pytest_cache
