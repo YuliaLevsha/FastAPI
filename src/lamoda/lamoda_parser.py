@@ -3,38 +3,7 @@ from fake_useragent import UserAgent
 import aiohttp
 import asyncio
 from bs4 import BeautifulSoup
-from pydantic import BaseModel
-
-
-class Clothes(BaseModel):
-    category: str
-    gender: str
-    name: str
-    brand: str
-    price: float
-    data_instance: datetime
-
-    def __str__(self):
-        return (
-            "Category: "
-            + self.category
-            + ", "
-            + "gender: "
-            + self.gender
-            + ", "
-            + "name: "
-            + self.name
-            + ""
-            ", "
-            + "brand: "
-            + self.brand
-            + ", "
-            + "price: "
-            + str(self.price)
-            + ", "
-            + "data: "
-            + self.data_instance.strftime("%Y-%m-%d %H:%M")
-        )
+from src.lamoda.lamoda_model import Clothes
 
 
 class LamodaScraper:
@@ -76,6 +45,7 @@ class LamodaScraper:
         return clothes
 
     async def fetch_all(self, urls):
+        result = []
         for url in urls:
             async with aiohttp.ClientSession() as session:
                 tasks = []
@@ -88,8 +58,11 @@ class LamodaScraper:
                         index += 1
                     else:
                         break
-                await asyncio.gather(*tasks)
+                values = await asyncio.gather(*tasks)
+                for value in values:
+                    result.extend(value)
+                return result
 
     def fetch_async(self, urls):
-        asyncio.run(self.fetch_all(urls))
-        return {"Status": "good"}
+        result = asyncio.run(self.fetch_all(urls))
+        return result

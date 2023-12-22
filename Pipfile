@@ -19,6 +19,15 @@ asyncio = "*"
 bs4 = "*"
 mock = "*"
 pytest-asyncio = "*"
+pydantic = "*"
+types-beautifulsoup4 = "*"
+python-dotenv = "*"
+pymongo = "*"
+kafka = "*"
+pydantic-settings = "*"
+redis = "*"
+kafka-python = "*"
+aiokafka = "*"
 
 [dev-packages]
 
