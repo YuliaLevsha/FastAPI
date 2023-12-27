@@ -11,13 +11,12 @@ dao = DAO('clothes')
 
 @router.get('/clothes-parser')
 async def scrapper_clothes(scraper: LamodaScraper = Depends()):
-    clothes = scraper.fetch_async(urls)
-    producer.add_to_kafka('parsing', clothes)
+    clothes = await scraper.fetch_all(urls)
+    await producer.add_to_kafka('parsing', data=clothes, partition=0)
     return {'Clothes': 'ok'}
 
 
-@router.post('/get-clothes')
-async def get_clothes():
-    consumer.get_from_kafka(dao)
-    # result = consumer.get_from_kafka(dao)
-    return {'Clothes:': 'ok'}
+@router.get('/get-clothes')
+def get_clothes():
+    consumer.get_from_kafka(dao, partition=0, param='clothes')
+    return {'Clothes:': 'good'}

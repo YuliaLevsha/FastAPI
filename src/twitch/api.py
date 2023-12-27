@@ -1,4 +1,4 @@
-from .twitch_parser import TwitchScraper
+from src.twitch.twitch_parser import TwitchScraper
 from fastapi import Depends, APIRouter
 from src.producer import producer
 from src.dao import DAO
@@ -17,27 +17,33 @@ async def scrapper_games(scraper: TwitchScraper = Depends()):
 @router.get('/streams-parser')
 async def scrapper_streams(scraper: TwitchScraper = Depends()):
     streams = await scraper.get_streams()
-    await producer.add_to_kafka('parsing', streams)
+    await producer.add_to_kafka('parsing', data=streams[1], partition=2)
     return {'Streams': 'ok'}
 
 
 @router.get('/streamers-parser')
 async def scrapper_streamers(scraper: TwitchScraper = Depends()):
     streamers = await scraper.get_streamers()
-    await producer.add_to_kafka('parsing', streamers)
+    await producer.add_to_kafka('parsing', data=streamers, partition=3)
     return {'Streamers': 'ok'}
 
 
 @router.get('/get-games')
-async def get_games():
+def get_games():
     dao = DAO('games')
-    data = await consumer.get_from_kafka(dao, 'name')
-    return {'Games:': data}
+    consumer.get_from_kafka(dao, partition=1, param='games')
+    return {'Games:': 'good'}
 
 
+@router.get('/get-streams')
 def get_streams():
-    pass
+    dao = DAO('streams')
+    consumer.get_from_kafka(dao, partition=2, param='streams')
+    return {'Streams:': 'good'}
 
 
+@router.get('/get-streamers')
 def get_streamers():
-    pass
+    dao = DAO('streamers')
+    consumer.get_from_kafka(dao, partition=3, param='streamers')
+    return {'Streamers:': 'good'}

@@ -10,11 +10,11 @@ load_dotenv()
 class MongoDbSettings(BaseSettings):
     MONGO_INITDB_ROOT_USERNAME: str
     MONGO_INITDB_ROOT_PASSWORD: str
-    MONGO_HOST: str
+    HOST: str
 
     def mongo_dsn(self):
         mongo_dsn = "mongodb://{0}:{1}@{2}:27017/?authMechanism=DEFAULT/".format(
-            self.MONGO_INITDB_ROOT_USERNAME, self.MONGO_INITDB_ROOT_PASSWORD, self.MONGO_HOST
+            self.MONGO_INITDB_ROOT_USERNAME, self.MONGO_INITDB_ROOT_PASSWORD, self.HOST
         )
         return mongo_dsn
 
@@ -37,7 +37,7 @@ class TwitchAPISettings(BaseSettings):
 
 
 class RedisSettings(BaseSettings):
-    HOST: str = 'localhost'
+    HOST: str
     port: int = 6379
 
     def connect(self):
@@ -48,7 +48,7 @@ class RedisSettings(BaseSettings):
 class Settings(BaseSettings):
     mongo_db: MongoDbSettings = MongoDbSettings(_env_file=Path('../.env'))
     twitch_api: TwitchAPISettings = TwitchAPISettings(_env_file=Path('../.env'))
-    cache: RedisSettings = RedisSettings()
+    cache: RedisSettings = RedisSettings(_env_file=Path('../.env'))
 
 
 settings = Settings()

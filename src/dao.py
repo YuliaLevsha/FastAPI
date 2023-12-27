@@ -1,6 +1,7 @@
 from src.config import settings
 from typing import List, Dict
 from pymongo import MongoClient
+from src.consumer import settings
 
 
 CLIENT = MongoClient(settings.mongo_db.mongo_dsn())

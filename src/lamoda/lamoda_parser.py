@@ -62,7 +62,3 @@ class LamodaScraper:
                 for value in values:
                     result.extend(value)
                 return result
-
-    def fetch_async(self, urls):
-        result = asyncio.run(self.fetch_all(urls))
-        return result
