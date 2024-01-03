@@ -1,6 +1,6 @@
 import requests
 from config import settings
-from twitch.twitch_model import *
+from twitch.twitch_model import Games, Streams, Streamers
 from datetime import datetime
 
 
