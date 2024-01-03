@@ -1,7 +1,7 @@
 from typing import List, Dict
 import pymongo.mongo_client
 from pymongo import MongoClient
-from config import settings
+from src.config import settings
 
 
 CLIENT: pymongo.mongo_client.MongoClient = MongoClient(settings.mongo_db.mongo_dsn())

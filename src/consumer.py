@@ -1,12 +1,13 @@
 from json import loads
 from kafka import KafkaConsumer
+from src.config import settings
 
 
 class Consumer:
     def __init__(self, topic):
         self.consumer = KafkaConsumer(
             topic,
-            bootstrap_servers=["192.168.99.100:9092"],
+            bootstrap_servers=settings.kafka.bootstrap_service(),
             api_version=(2, 5, 0),
             auto_offset_reset="earliest",
             enable_auto_commit=False,

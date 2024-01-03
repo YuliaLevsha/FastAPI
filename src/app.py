@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from lamoda.lamoda_api import router as lamoda_router
-from twitch.twitch_api import router as twitch_router
+from src.lamoda.lamoda_api import router as lamoda_router
+from src.twitch.twitch_api import router as twitch_router
 
 
 app = FastAPI()

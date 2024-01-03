@@ -1,8 +1,8 @@
-from twitch.twitch_parser import TwitchScraper
+from src.twitch.twitch_parser import TwitchScraper
 from fastapi import Depends, APIRouter
-from producer import producer
-from dao import DAO
-from consumer import consumer
+from src.producer import producer
+from src.dao import DAO
+from src.consumer import consumer
 
 router = APIRouter(prefix="/twitch")
 

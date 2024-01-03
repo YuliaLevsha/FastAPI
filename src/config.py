@@ -47,10 +47,19 @@ class RedisSettings(BaseSettings):
         return connection
 
 
+class KafkaSettings(BaseSettings):
+    HOST: str
+
+    def bootstrap_service(self):
+        return self.HOST + ":9092"
+
+
 class Settings(BaseSettings):
     mongo_db: MongoDbSettings = MongoDbSettings(_env_file=Path("../.env"))  # type: ignore[call-arg]
     twitch_api: TwitchAPISettings = TwitchAPISettings(_env_file=Path("../.env"))  # type: ignore[call-arg]
     cache: RedisSettings = RedisSettings(_env_file=Path("../.env"))  # type: ignore[call-arg]
+    kafka: KafkaSettings = KafkaSettings(_env_file=Path("../.env"))  # type: ignore[call-arg]
+    urls: list = ["https://www.lamoda.by/c/4418/clothes-body/?page="]
 
 
 settings = Settings()

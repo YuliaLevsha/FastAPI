@@ -3,7 +3,7 @@ from fake_useragent import UserAgent
 import aiohttp
 import asyncio
 from bs4 import BeautifulSoup
-from lamoda.lamoda_model import Clothes
+from src.lamoda.lamoda_model import Clothes
 
 
 class LamodaScraper:
