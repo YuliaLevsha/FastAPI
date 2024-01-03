@@ -2,9 +2,10 @@ import asyncio
 from unittest.mock import patch, MagicMock
 import aiohttp
 from bs4 import BeautifulSoup
-from twitch.twitch_parser import TwitchScraper
-from lamoda.lamoda_parser import LamodaScraper
+from src.twitch.twitch_parser import TwitchScraper
+from src.lamoda.lamoda_parser import LamodaScraper
 import unittest
+from src.config import settings
 
 data_twitch_test1 = {
     "data": {
@@ -16,16 +17,18 @@ data_twitch_test1 = {
     }
 }
 
+URL = settings.urls[0]
+
 
 def html_text():
-    with open("tests/html_text_lamoda.txt", "r", encoding="utf-8") as file:
+    with open("src/tests/html_text_lamoda.txt", "r", encoding="utf-8") as file:
         text = file.read()
     return BeautifulSoup(text, "html.parser").text.replace("\n", "")[:50]
 
 
 class TestTwitchScraper(unittest.TestCase):
     @patch(
-        "twitch.twitch_parser.TwitchScraper.base_get_response",
+        "src.twitch.twitch_parser.TwitchScraper.base_get_response",
         MagicMock(return_value=data_twitch_test1),
     )
     async def test_base_get_response(self):
@@ -34,20 +37,20 @@ class TestTwitchScraper(unittest.TestCase):
 
 
 class TestLamodaScrapper(unittest.TestCase):
-    @patch("lamoda.lamoda_parser.LamodaScraper.get_clothes", MagicMock(return_value=60))
+    @patch(
+        "src.lamoda.lamoda_parser.LamodaScraper.get_clothes", MagicMock(return_value=60)
+    )
     async def test_get_clothes(self):
-        urls = ["https://www.lamoda.by/c/4418/clothes-body/?page="]
         lamoda = LamodaScraper()
         session = aiohttp.ClientSession()
-        result = lamoda.get_clothes(await lamoda.get_page(urls[0], 1, session))
+        result = lamoda.get_clothes(await lamoda.get_page(URL, 1, session))
         await session.close()
         self.assertEquals(result, 60)
 
     @patch("bs4.BeautifulSoup", MagicMock(return_value=html_text()))
     async def test_beautifulSoup(self):
-        urls = ["https://www.lamoda.by/c/4418/clothes-body/?page="]
         session = aiohttp.ClientSession()
-        page = await LamodaScraper().get_page(urls[0], 1, session)
+        page = await LamodaScraper().get_page(URL, 1, session)
         html = await page.text()
         result = BeautifulSoup(html, "html.parser").text.replace("\n", "")[:50]
         await session.close()
