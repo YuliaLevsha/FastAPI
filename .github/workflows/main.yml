@@ -28,7 +28,7 @@ jobs:
         run: docker-compose up -d --build
 
       - name: pytest
-        run: docker-compose exec -T fastapi python -m unittest discover
+        run: docker-compose exec -T fastapi python -m pytest
 
       - name: black
         run: |
