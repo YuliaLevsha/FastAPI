@@ -1,6 +1,6 @@
 import requests
-from src.config import settings
-from src.twitch.twitch_model import *
+from config import settings
+from twitch.twitch_model import *
 from datetime import datetime
 
 

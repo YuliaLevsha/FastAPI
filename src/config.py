@@ -41,14 +41,16 @@ class RedisSettings(BaseSettings):
     port: int = 6379
 
     def connect(self):
-        connection = redis.asyncio.Redis(host=self.HOST, port=self.port, decode_responses=True)
+        connection = redis.asyncio.Redis(
+            host=self.HOST, port=self.port, decode_responses=True
+        )
         return connection
 
 
 class Settings(BaseSettings):
-    mongo_db: MongoDbSettings = MongoDbSettings(_env_file=Path('../.env'))
-    twitch_api: TwitchAPISettings = TwitchAPISettings(_env_file=Path('../.env'))
-    cache: RedisSettings = RedisSettings(_env_file=Path('../.env'))
+    mongo_db: MongoDbSettings = MongoDbSettings(_env_file=Path("../.env"))  # type: ignore[call-arg]
+    twitch_api: TwitchAPISettings = TwitchAPISettings(_env_file=Path("../.env"))  # type: ignore[call-arg]
+    cache: RedisSettings = RedisSettings(_env_file=Path("../.env"))  # type: ignore[call-arg]
 
 
 settings = Settings()

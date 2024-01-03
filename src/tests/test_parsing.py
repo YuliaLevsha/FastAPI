@@ -2,8 +2,8 @@ import asyncio
 from unittest.mock import patch, MagicMock
 import aiohttp
 from bs4 import BeautifulSoup
-from src.twitch.twitch_parser import TwitchScraper
-from src.lamoda.lamoda_parser import LamodaScraper
+from twitch.twitch_parser import TwitchScraper
+from lamoda.lamoda_parser import LamodaScraper
 import unittest
 
 data_twitch_test1 = {
@@ -18,14 +18,14 @@ data_twitch_test1 = {
 
 
 def html_text():
-    with open("src/tests/html_text_lamoda.txt", "r", encoding="utf-8") as file:
+    with open("tests/html_text_lamoda.txt", "r", encoding="utf-8") as file:
         text = file.read()
     return BeautifulSoup(text, "html.parser").text.replace("\n", "")[:50]
 
 
 class TestTwitchScraper(unittest.TestCase):
     @patch(
-        "src.twitch.twitch_parser.TwitchScraper.base_get_response",
+        "twitch.twitch_parser.TwitchScraper.base_get_response",
         MagicMock(return_value=data_twitch_test1),
     )
     async def test_base_get_response(self):
@@ -34,7 +34,7 @@ class TestTwitchScraper(unittest.TestCase):
 
 
 class TestLamodaScrapper(unittest.TestCase):
-    @patch("src.lamoda.lamoda_parser.LamodaScraper.get_clothes", MagicMock(return_value=60))
+    @patch("lamoda.lamoda_parser.LamodaScraper.get_clothes", MagicMock(return_value=60))
     async def test_get_clothes(self):
         urls = ["https://www.lamoda.by/c/4418/clothes-body/?page="]
         lamoda = LamodaScraper()

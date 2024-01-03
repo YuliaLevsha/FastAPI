@@ -1,11 +1,11 @@
-from src.config import settings
 from typing import List, Dict
+import pymongo.mongo_client
 from pymongo import MongoClient
-from src.consumer import settings
+from config import settings
 
 
-CLIENT = MongoClient(settings.mongo_db.mongo_dsn())
-DB = CLIENT['FastAPI']
+CLIENT: pymongo.mongo_client.MongoClient = MongoClient(settings.mongo_db.mongo_dsn())
+DB = CLIENT["FastAPI"]
 
 
 class DAO:
@@ -26,7 +26,7 @@ class DAO:
 
     def update(self, params: Dict, data):
         document = self.get_one(params)
-        new_data = {'$set': data}
+        new_data = {"$set": data}
         self.collection.update_one(document, new_data)
 
     def delete(self, params: Dict):
