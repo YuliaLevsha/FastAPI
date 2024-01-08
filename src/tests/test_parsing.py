@@ -1,11 +1,9 @@
-import asyncio
-from unittest.mock import patch, MagicMock, AsyncMock
+from unittest.mock import patch, MagicMock
 import aiohttp
 import pytest
 from bs4 import BeautifulSoup
 from src.twitch.twitch_parser import TwitchScraper
 from src.lamoda.lamoda_parser import LamodaScraper
-import unittest
 from src.config import settings
 
 data_twitch_test1 = {
