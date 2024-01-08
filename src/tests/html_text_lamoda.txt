@@ -1,6 +1,4 @@
 
-  
-    
 
 
 
@@ -10,21 +8,6 @@
 
 
 
-  
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  
 
 
 
@@ -32,7 +15,6 @@
 
 
 
-  
 
 
 
@@ -40,7 +22,25 @@
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -80,8 +80,8 @@ window.onerror = function(msg, url, line, column, oErr){
     }
     valueToSend = ('//z.lmcdn.ru/site/error/js/' + location.hostname + '/' + args.join('&')).slice(0, 2000);
     /*.
-        
-        
+
+
     */
     if(prevValueToSend !== valueToSend){
         prevValueToSend = valueToSend;
@@ -325,7 +325,7 @@ try{
         pageType = 'other_page';
     }
 
-    
+
     try {
         var adBlocker;
         var adScript = document.createElement('script');
@@ -335,7 +335,7 @@ try{
         a.parentNode.insertBefore(adScript, a);
         adScript.onload = function() { adBlocker = '0' };
         adScript.onerror = function() { adBlocker = '1' };
-        window.addEventListener("load", function(event) { 
+        window.addEventListener("load", function(event) {
           if (adBlocker) {
             window.document.cookie = "lmda_adBlocker=" + adBlocker + "; path=/";
           }
@@ -343,7 +343,7 @@ try{
     } catch (error) {
       console.error(error);
     }
-    
+
 
     var splitBuckets = 'v3-118-02-00-081809-111826-101830-121831-071833-121836-101837-011843-121852-121857-011858-071860-101884-121889-021890-041893-051894-091896-051898-041899-011900-091901-091902-031904-051909-031910-011911-031912-081913-101914-071915-101916-011917-081918-031919-111920-111922-081924';
     var ab = '3752,3799,3830,3804,3625,3733,3750,3805,3822';
@@ -393,7 +393,7 @@ try{
       user-nav-ITPMO_2179
     "
 >
-  
+
     <span class="link user-nav__link user-nav__link-login user-nav__link-disable">Войти</span><div class="user-nav__cart"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 2.5h-13L3.747 18.28a2 2 0 0 0 1.988 2.22h12.53a2 2 0 0 0 1.988-2.22L18.5 2.5z" stroke="#000"/><path d="M15.5 9a3.5 3.5 0 1 1-7 0m0-2V5m7 2V5" stroke="#000"/></svg><a href="/checkout/cart/" class="link user-nav__link user-nav__link-cart">Корзина</a></div></div><div class="d-header-genders ">
   <a href="/women-home/?sitelink=topmenuW"
     data-genders="women"
@@ -410,219 +410,219 @@ try{
         <div class="menu__categories
           ">
           <div class="d-header-top-menu-wrapper"><nav class="d-header-topmenu">
-  
-    
-    
 
-  
-  
 
-  
 
-  
-  
-    
-  
-  
-    
-  
-  
-    
-  
 
-  
 
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
+
           d-header-topmenu-category__link_randomColor
-        
-        
-        
+
+
+
         "
         href="/c/4153/default-women/?is_new=1&amp;l=1&amp;sitelink=topmenuW"
       >
         Новинки
       </a>
-    
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
-        
-        
+
+
+
         "
         href="/c/355/clothes-zhenskaya-odezhda/?l=2&amp;sitelink=topmenuW"
       >
         Одежда
       </a>
-    
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
-        
-        
+
+
+
         "
         href="/c/15/shoes-women/?l=3&amp;sitelink=topmenuW"
       >
         Обувь
       </a>
-    
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
-        
-        
+
+
+
         "
         href="/c/557/accs-zhenskieaksessuary/?l=4&amp;sitelink=topmenuW"
       >
         Аксессуары
       </a>
-    
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
-        
-        
+
+
+
         "
         href="/brands/?genders=women&amp;l=5&amp;sitelink=topmenuW"
       >
         Бренды
       </a>
-    
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
-        
-        
+
+
+
         "
         href="/home-premium-women/?l=6&amp;sitelink=topmenuW"
       >
         Premium
       </a>
-    
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
-        
-        
+
+
+
         "
         href="/home-sport-women/?l=7&amp;sitelink=topmenuW"
       >
         Спорт
       </a>
-    
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
-        
-        
+
+
+
         "
         href="/c/4308/default-krasotawoman/?l=8&amp;sitelink=topmenuW"
       >
         Красота
       </a>
-    
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
-        
-        
+
+
+
         "
         href="/c/6647/home_accs-tovarydlyadoma/?l=9&amp;sitelink=topmenuW"
       >
         Дом
       </a>
-    
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
-        
-        
+
+
+
         "
         href="/blog/?l=10&amp;sitelink=topmenuW"
       >
         Блог
       </a>
-    
-  
-    
-    
-    
-    
 
-    
+
+
+
+
+
+
+
       <a class="d-header-topmenu-category__link
-        
+
           d-header-topmenu-category__link_red
-        
-        
-        
+
+
+
         "
         href="/c/4153/default-women/?display_locations=outlet&amp;is_sale=1&amp;l=11&amp;sitelink=topmenuW"
       >
         Sale%
       </a></nav></div></div></div></div></header></x-header><div class="d-catalog-banners"><div class="width-wrapper clearfix"><x-banner type="top_promobar_cat"></x-banner><!-- top_promobar_cat --></div><div class="width-wrapper clearfix">
-        
+
   <div
     class="x-breadcrumbs"
     id="breadcrumbs"
@@ -636,7 +636,7 @@ try{
       >
         Главная
       </a></div><div class="x-breadcrumbs__slide">
-        
+
           <a
             class="x-link x-link__secondaryLabel"
             title="Женщинам"
@@ -644,7 +644,7 @@ try{
           >
             Женщинам
           </a></div><div class="x-breadcrumbs__slide">
-        
+
           <a
             class="x-link x-link__secondaryLabel"
             title="Одежда"
@@ -652,7 +652,7 @@ try{
           >
             Одежда
           </a></div><div class="x-breadcrumbs__slide">
-        
+
           <a
             class="x-link x-link__secondaryLabel"
             title="Боди"
@@ -667,2252 +667,2252 @@ try{
 
 
 
-      
-  
+
+
     <main class="
         width-wrapper
       ">
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="d-catalog"><div class="d-catalog-header"><div class="d-catalog-header__title"><h1 class="d-catalog-header__title-text">
         Женские блузы-боди и топы
     </h1><span class="d-catalog-header__product-counter">458  товаров</span></div></div><div class="d-catalog__main"><div class="d-catalog__left-column"><div class="d-catalog__navigation">
-          
-          
-  
 
-  
 
-  
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-       x-tree-view-catalog-navigation__category_root 
-      
-      
+       x-tree-view-catalog-navigation__category_root
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/15/shoes-women/">Обувь</a
         ><span class="x-tree-view-catalog-navigation__found">17429</span></div>
-    
-  
-  
-    
-    
-    
-    
+
+
+
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-       x-tree-view-catalog-navigation__category_root 
-      
-      
+       x-tree-view-catalog-navigation__category_root
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/355/clothes-zhenskaya-odezhda/">Одежда</a
         ><span class="x-tree-view-catalog-navigation__found">79014</span></div><ul class="x-tree-view-catalog-navigation__subtree"><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/399/clothes-bluzy-rubashki/">Блузы и рубашки</a
         ><span class="x-tree-view-catalog-navigation__found">3954</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-       x-tree-view-catalog-navigation__category_selected 
-      
+
+       x-tree-view-catalog-navigation__category_selected
+
       "
     >
       <a class="x-link
-         x-link__badgeForeground 
+         x-link__badgeForeground
         "
         href="/c/4418/clothes-body/">Боди</a
         ><span class="x-tree-view-catalog-navigation__found">458</span></div><ul class="x-tree-view-catalog-navigation__subtree"><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-       x-tree-view-catalog-navigation__category_indent 
+
+
+       x-tree-view-catalog-navigation__category_indent
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/4311/clothes-bodysdlinnimrukavom/">Боди c длинным рукавом</a
         ><span class="x-tree-view-catalog-navigation__found">254</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-       x-tree-view-catalog-navigation__category_indent 
+
+
+       x-tree-view-catalog-navigation__category_indent
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/4312/clothes-bodyskorotkimrukavom/">Боди с коротким рукавом</a
         ><span class="x-tree-view-catalog-navigation__found">190</span></div></li></ul></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/7571/default-knitted-suits/">Вязаные костюмы</a
         ><span class="x-tree-view-catalog-navigation__found">1344</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/401/clothes-bryuki-shorty-kombinezony/">Брюки</a
         ><span class="x-tree-view-catalog-navigation__found">7848</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/357/clothes-verkhnyaya-odezhda/">Верхняя одежда</a
         ><span class="x-tree-view-catalog-navigation__found">5708</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/371/clothes-trikotazh/">Джемперы, свитеры и кардиганы</a
         ><span class="x-tree-view-catalog-navigation__found">7334</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/397/clothes-d-insy/">Джинсы</a
         ><span class="x-tree-view-catalog-navigation__found">3580</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/4651/clothes-dom-odejda/">Домашняя одежда</a
         ><span class="x-tree-view-catalog-navigation__found">1325</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/4184/clothes-coveralls/">Комбинезоны</a
         ><span class="x-tree-view-catalog-navigation__found">572</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/3002/clothes-plyajnaya-odejda/">Купальники и пляжная одежда</a
         ><span class="x-tree-view-catalog-navigation__found">4757</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/709/clothes-nizhneye-belyo/">Нижнее белье</a
         ><span class="x-tree-view-catalog-navigation__found">2423</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/4112/default-stockings/">Носки, чулки и колготки</a
         ><span class="x-tree-view-catalog-navigation__found">736</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/367/clothes-pidzhaki-zhaketi/">Пиджаки и костюмы</a
         ><span class="x-tree-view-catalog-navigation__found">3244</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/369/clothes-platiya/">Платья и сарафаны</a
         ><span class="x-tree-view-catalog-navigation__found">13786</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/415/clothes-kostyumy/">Спортивные костюмы</a
         ><span class="x-tree-view-catalog-navigation__found">1916</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/2474/clothes-tolstovki-olimpiyki/">Худи и свитшоты</a
         ><span class="x-tree-view-catalog-navigation__found">3351</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/2627/clothes-topy/">Топы и майки</a
         ><span class="x-tree-view-catalog-navigation__found">3758</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/4748/clothes-womtuniki/">Туники</a
         ><span class="x-tree-view-catalog-navigation__found">29</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/7678/accs-sredstva-i-aksessuary-dlya-odejdy/">Уход за одеждой</a
         ><span class="x-tree-view-catalog-navigation__found">8</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/2478/clothes-futbolki/">Футболки и поло</a
         ><span class="x-tree-view-catalog-navigation__found">6221</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/2485/clothes-shorty/">Шорты</a
         ><span class="x-tree-view-catalog-navigation__found">2524</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/423/clothes-yubki/">Юбки</a
         ><span class="x-tree-view-catalog-navigation__found">4147</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/2937/clothes-clothes-big-size/">Одежда больших размеров</a
         ><span class="x-tree-view-catalog-navigation__found">8563</span></div></li><li>
-            
-    
-    
-    
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-      
-      
-      
+
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/4170/clothes-maternityclothes/">Одежда для беременных</a
         ><span class="x-tree-view-catalog-navigation__found">98</span></div></li></ul>
-    
-  
-  
-    
-    
-    
-    
+
+
+
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-       x-tree-view-catalog-navigation__category_root 
-      
-      
+       x-tree-view-catalog-navigation__category_root
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/557/accs-zhenskieaksessuary/">Аксессуары</a
         ><span class="x-tree-view-catalog-navigation__found">16209</span></div>
-    
-  
-  
-    
-    
-    
-    
+
+
+
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-       x-tree-view-catalog-navigation__category_root 
-      
-      
+       x-tree-view-catalog-navigation__category_root
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/1262/default-premium-women/">Premium</a
         ><span class="x-tree-view-catalog-navigation__found">12506</span></div>
-    
-  
-  
-    
-    
-    
-    
+
+
+
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-       x-tree-view-catalog-navigation__category_root 
-      
-      
+       x-tree-view-catalog-navigation__category_root
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/831/default-sports-women/">Спорт</a
         ><span class="x-tree-view-catalog-navigation__found">14996</span></div>
-    
-  
-  
-    
-    
-    
-    
+
+
+
+
+
+
+
 
     <div class="x-tree-view-catalog-navigation__category
-       x-tree-view-catalog-navigation__category_root 
-      
-      
+       x-tree-view-catalog-navigation__category_root
+
+
       "
     >
       <a class="x-link
-         x-link__label 
+         x-link__label
         "
         href="/c/4308/default-krasotawoman/">Красота</a
         ><span class="x-tree-view-catalog-navigation__found">3507</span></div></div></div><div class="d-catalog__right-column"><div class="d-catalog__filters"><div class="d-multifilters-skeleton"><div class="d-multifilters-skeleton__item d-multifilters-skeleton__item_black d-multifilters-skeleton-new-design-color"><span class="d-multifilters-skeleton__title">по популярности</span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow_white"></i></span></div>
 
-    
 
-  
 
-  
-  
 
-  
-  
 
-  
-  
 
-  
-  
-  
-    
-    
-    
 
-    
 
-      
 
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
-        
-          
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Материалы
-        
-      </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-        
-        
-      
 
-      
-        
-    
-    
+      </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Цвет
-        
+
       </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Размер
-        
+
       </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Бренд
-        
+
       </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Цена
-        
+
       </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Вырез/воротник
-        
+
       </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Детали
-        
+
       </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Застежка
-        
+
       </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Помогаю планете
-        
+
       </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Стиль
-        
+
       </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
-      
+
+
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Узор
-        
+
       </span><span class="d-multifilters-skeleton__icon"><i class="icon-arrow icon__filter_arrow"></i></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
-      
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
+
       d-multifilters-skeleton__item-left-padding
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Только со скидкой
-        
-          
+
+
     <span class="d-multifilters-skeleton__checkbox"><span class="d-multifilters-skeleton__checkbox-circle"></span></span></span></div>
-  
-      
-    
-  
-    
-    
-    
 
-    
 
-      
-      
 
-      
-        
-    
-    
-      
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="d-multifilters-skeleton__item
-      
+
       d-multifilters-skeleton__item-left-padding
       d-multifilters-skeleton-new-design-color"
     >
       <span class="d-multifilters-skeleton__title">
         Только товары Lamoda
-        
+
       </span></div></div></div><div class="grid__catalog"><div class="x-product-card__card"><a href="/p/mp002xw131ue/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW131UE_21557995_1_v1_2x.jpg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >87.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >43.50 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0fdr3/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW0FDR3_20306205_1_v1_2x.jpeg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >116.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >88.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди Exclusive online</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0ivj6/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW0IVJ6_19596297_1_v1_2x.jpeg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >131.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0o7bn/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW0O7BN_19043927_1_v1_2x.jpeg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >139.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди Exclusive online</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw1ce8b/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW1CE8B_20135943_1_v1_2x.jpeg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >125.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >63.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw1c1fb/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW1C1FB_20599182_1_v1_2x.jpeg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >76.90</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >38.50 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди Exclusive online</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0jf6p/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW0JF6P_20054118_1_v1_2x.jpeg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >125.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >63.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0jrh6/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW0JRH6_20541883_1_v1_2x.jpeg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >110.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди Exclusive online</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0ols6/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW0OLS6_21734143_1_v1_2x.jpeg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >298.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw19z46/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW19Z46_21383419_1_v1_2x.jpeg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >113.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >79.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди Exclusive online</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw19yvl/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW19YVL_21449644_1_v1_2x.jpg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >87.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >43.50 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0fdr4/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog">
-        
+
           <img
             src="//a.lmcdn.ru/img236x341/M/P/MP002XW0FDR4_20306139_1_v1_2x.jpeg"
             class="x-product-card__pic-img"
             alt=""
           />
-        
+
       </div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >116.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw14q5z/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >202.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0o7bo/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >139.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >98.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw1616t/clothes-tuosite-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >63.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >35.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Tuosite</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0jrgw/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >84.60</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >42.30 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0yrtb/clothes-incanto-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >69.90 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Incanto</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw1g38e/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >144.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >101.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди Exclusive online</div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladd427501/clothes-missgabby-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >359.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >357.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Miss Gabby</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0dcyy/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >126.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >76.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtlacs025001/clothes-mango-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >99.99</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >59.99 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Mango</div><div class="x-product-card-description__product-name"> Боди SALLY</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0yqtc/clothes-lime-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >109.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Lime</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0ev3t/clothes-incanto-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >169.90 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Incanto</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0lgnf/clothes-belleyou-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >78.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >43.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Belle You</div><div class="x-product-card-description__product-name"> Боди Рубчик</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0tlpz/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >61.50</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >30.80 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0b3if/clothes-teyli-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >360.99 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Teyli</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtlacz955301/clothes-mango-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >99.99 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Mango</div><div class="x-product-card-description__product-name"> Боди LILY</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw1a52g/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >130.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0rkxj/clothes-belleyou-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >170.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >90.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Belle You</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw016wm/clothes-belleyou-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >89.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >62.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Belle You</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0slir/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >123.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >105.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladc144601/clothes-mansen-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >109.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Mansen</div><div class="x-product-card-description__product-name"> Боди GALA HIPS</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0emxn/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >71.40 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw1ca5b/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >88.50</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >44.30 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди Exclusive online</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0jrh4/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >110.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0y9u5/clothes-belleyou-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >204.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >143.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Belle You</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0yrt4/clothes-incanto-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >69.90 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Incanto</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0jrh1/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >84.60</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >42.30 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0jrzm/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >110.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >88.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0wrw2/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >144.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >109.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди Exclusive online</div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0yr4f/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >104.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >89.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladd415501/clothes-monkartis-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >179.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >175.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Mon-Kartis</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladc438901/clothes-diesel-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >189.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Diesel</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0eudo/clothes-karllagerfeldjeans-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >427.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Karl Lagerfeld Jeans</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw131u8/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >87.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >43.50 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0olrv/clothes-toptop-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >186.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Top Top</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0tlq2/clothes-zarina-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >61.50</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >30.80 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Zarina</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladb596501/clothes-nocturne-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >284.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >255.60 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Nocturne</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/mp002xw0ev3u/clothes-incanto-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >169.90 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Incanto</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladc439001/clothes-diesel-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >189.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Diesel</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladd427601/clothes-missgabby-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >334.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >332.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Miss Gabby</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladd415301/clothes-monkartis-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >179.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >175.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Mon-Kartis</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladc438601/clothes-diesel-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >169.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >167.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Diesel</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladc442701/clothes-diesel-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >379.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >375.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Diesel</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladc438701/clothes-diesel-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >169.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >167.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Diesel</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladd427801/clothes-missgabby-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >359.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >357.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Miss Gabby</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladb938701/clothes-estlounge-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >189.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Est Lounge</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladc438801/clothes-diesel-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-single
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >189.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Diesel</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladd415201/clothes-monkartis-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >179.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
           >175.00 р.</span></div><div class="x-product-card-description__microdata-wrap"><div class="x-product-card-description__brand-name">Mon-Kartis</div><div class="x-product-card-description__product-name"> Боди </div></div></div></a></div><div class="x-product-card__card"><a href="/p/rtladd427701/clothes-missgabby-bodi/" class="x-product-card__link x-product-card__hit-area"><div class="x-product-card__pic x-product-card__pic-catalog"></div>
-      
-  
+
+
 
   <div class="
-    
+
       x-product-card-description
     "
     >
-    
+
       <div class="x-product-card-description__microdata-wrap">
-        
+
           <span
             class="x-product-card-description__price-old"
             style="white-space: nowrap;"
           >309.00</span><!--
         --><span
             class="x-product-card-description__price-new
-              
+
                 x-product-card-description__price-WEB8507_price_no_bold
               "
             style="white-space: nowrap;"
@@ -2951,7 +2951,7 @@ try{
     },
   };
 
-  
+
   LMDA.pageState = __NUXT__;
 </script><script crossorigin="anonymous" type="module" src="//a.lmcdn.ru/static/23.11.30/main.js"></script><!-- by_hotfix_footer --><script type="application/ld+json">
   [
@@ -2987,5 +2987,5 @@ try{
 
 
 
-  
+
 

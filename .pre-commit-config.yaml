@@ -11,21 +11,21 @@ repos:
     hooks:
       - id: black
         name: run black
-        entry: black
+        entry: black .
         types: [python]
         language: system
         stages: [push, commit]
 
       - id: flake8
         name: run flake8
-        entry: flake8
+        entry: flake8 --ignore E501,W503
         types: [python]
         language: system
         stages: [push, commit]
 
       - id: mypy
         name: run mypy
-        entry: mypy
+        entry: mypy . --exclude venv --explicit-package-bases -V
         types: [python]
         language: system
         stages: [push, commit]

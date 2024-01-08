@@ -13,3 +13,5 @@ actions-runner/
 src/credentials.py
 
 .pytest_cache
+
+bitnami/
