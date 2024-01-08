@@ -33,7 +33,7 @@ class TestTwitchScraper(unittest.TestCase):
     )
     async def test_base_get_response(self):
         result = TwitchScraper().base_get_response("games", {"id": 33214})
-        self.assertEquals(result, data_twitch_test1)
+        self.assertEqual(result, data_twitch_test1)
 
 
 class TestLamodaScrapper(unittest.TestCase):
@@ -45,7 +45,7 @@ class TestLamodaScrapper(unittest.TestCase):
         session = aiohttp.ClientSession()
         result = lamoda.get_clothes(await lamoda.get_page(URL, 1, session))
         await session.close()
-        self.assertEquals(result, 60)
+        self.assertEqual(result, 60)
 
     @patch("bs4.BeautifulSoup", MagicMock(return_value=html_text()))
     async def test_beautifulSoup(self):
@@ -54,15 +54,17 @@ class TestLamodaScrapper(unittest.TestCase):
         html = await page.text()
         result = BeautifulSoup(html, "html.parser").text.replace("\n", "")[:50]
         await session.close()
-        self.assertEquals(result, html_text())
+        self.assertEqual(result, html_text())
 
 
 async def fetch_all():
-    task1 = asyncio.ensure_future(TestTwitchScraper().test_base_get_response())
-    task2 = asyncio.ensure_future(TestLamodaScrapper().test_get_clothes())
-    task3 = asyncio.ensure_future(TestLamodaScrapper().test_beautifulSoup())
-    tasks = [task1, task2, task3]
-    await asyncio.gather(*tasks)
+    # task1 = await asyncio.create_task(TestTwitchScraper().test_base_get_response())
+    # task1 = asyncio.ensure_future()
+    # task2 = asyncio.ensure_future(TestLamodaScrapper().test_get_clothes())
+    # task3 = asyncio.ensure_future(TestLamodaScrapper().test_beautifulSoup())
+    # tasks = [task1, task2, task3]
+    # await asyncio.gather(*tasks)
+    print('-----')
 
 
 asyncio.run(fetch_all())
