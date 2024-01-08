@@ -1,6 +1,7 @@
 import asyncio
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch, MagicMock, AsyncMock
 import aiohttp
+import pytest
 from bs4 import BeautifulSoup
 from src.twitch.twitch_parser import TwitchScraper
 from src.lamoda.lamoda_parser import LamodaScraper
@@ -21,50 +22,34 @@ URL = settings.urls[0]
 
 
 def html_text():
-    with open("src/tests/html_text_lamoda.txt", "r", encoding="utf-8") as file:
+    with open("html_text_lamoda.txt", "r", encoding="utf-8") as file:
         text = file.read()
     return BeautifulSoup(text, "html.parser").text.replace("\n", "")[:50]
 
 
-class TestTwitchScraper(unittest.TestCase):
-    @patch(
-        "src.twitch.twitch_parser.TwitchScraper.base_get_response",
-        MagicMock(return_value=data_twitch_test1),
-    )
-    async def test_base_get_response(self):
-        result = TwitchScraper().base_get_response("games", {"id": 33214})
-        self.assertEqual(result, data_twitch_test1)
+@pytest.mark.asyncio
+async def test_base_get_response():
+    with patch('src.twitch.twitch_parser.TwitchScraper.base_get_response', MagicMock(return_value=data_twitch_test1)):
+        scrapper = TwitchScraper()
+        result = scrapper.base_get_response("games", {"id": 33215})
+        assert result == data_twitch_test1
 
 
-class TestLamodaScrapper(unittest.TestCase):
-    @patch(
-        "src.lamoda.lamoda_parser.LamodaScraper.get_clothes", MagicMock(return_value=60)
-    )
-    async def test_get_clothes(self):
-        lamoda = LamodaScraper()
-        session = aiohttp.ClientSession()
-        result = lamoda.get_clothes(await lamoda.get_page(URL, 1, session))
-        await session.close()
-        self.assertEqual(result, 60)
-
-    @patch("bs4.BeautifulSoup", MagicMock(return_value=html_text()))
-    async def test_beautifulSoup(self):
-        session = aiohttp.ClientSession()
-        page = await LamodaScraper().get_page(URL, 1, session)
-        html = await page.text()
-        result = BeautifulSoup(html, "html.parser").text.replace("\n", "")[:50]
-        await session.close()
-        self.assertEqual(result, html_text())
+@pytest.mark.asyncio
+async def test_get_clothes():
+    with patch('src.lamoda.lamoda_parser.LamodaScraper.get_clothes', MagicMock(return_value=60)):
+        scrapper = LamodaScraper()
+        async with aiohttp.ClientSession() as session:
+            result = scrapper.get_clothes(await scrapper.get_page(URL, 1, session))
+            assert result == 60
 
 
-async def fetch_all():
-    # task1 = await asyncio.create_task(TestTwitchScraper().test_base_get_response())
-    # task1 = asyncio.ensure_future()
-    # task2 = asyncio.ensure_future(TestLamodaScrapper().test_get_clothes())
-    # task3 = asyncio.ensure_future(TestLamodaScrapper().test_beautifulSoup())
-    # tasks = [task1, task2, task3]
-    # await asyncio.gather(*tasks)
-    print('-----')
-
-
-asyncio.run(fetch_all())
+@pytest.mark.asyncio
+async def test_beautifulSoup():
+    with patch('bs4.BeautifulSoup', MagicMock(return_value=html_text())):
+        scrapper = LamodaScraper()
+        async with aiohttp.ClientSession() as session:
+            page = await scrapper.get_page(URL, 1, session)
+            html = await page.text()
+            result = BeautifulSoup(html, "html.parser").text.replace("\n", "")[:50]
+            assert result == html_text()
