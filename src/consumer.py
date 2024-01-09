@@ -18,7 +18,9 @@ class Consumer:
     def get_from_kafka(self, partition):
         docs = []
         for message in self.consumer:
+            print(message.partition == partition)
             if message.partition == partition:
+                print(message.value)
                 message = message.value
                 docs.append(message)
         return docs

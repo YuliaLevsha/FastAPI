@@ -1,32 +1,26 @@
 from json import dumps
-from aiokafka import AIOKafkaProducer
+from kafka import KafkaProducer
 from src.config import settings
+from datetime import datetime
 
 
 class Producer:
     def __init__(self):
-        self.producer = AIOKafkaProducer(
+        self.producer = KafkaProducer(
             bootstrap_servers=settings.kafka.bootstrap_service(),
             api_version="2.5.0",
             value_serializer=lambda x: dumps(x).encode("utf-8"),
         )
 
-    async def add_to_kafka(self, topic, data, partition):
-        await self.producer.start()
-        try:
-            for value in data:
-                value = dict(value)  # есть у стримеров еще одна дата!!!!!!   ИЗМЕНИТЬ
-                value["data_instance"] = value.get("data_instance").strftime(
-                    "%Y-%m-%dT%H:%M:%S.%f"
-                )
-                print(value)
-                await self.producer.send_and_wait(
-                    topic, value=value, partition=partition
-                )
-            await self.producer.flush()
-            print("Все опубликовалось успешно!")
-        finally:
-            await self.producer.stop()
+    def add_to_kafka(self, topic, data, partition):
+        for value in data:
+            value = dict(value)
+            for key in value:
+                if isinstance(value.get(key), datetime):
+                    value[key] = value.get(key).strftime("%Y-%m-%dT%H:%M:%S.%f")
+            print(value)
+            self.producer.send(topic, value=value, partition=partition)
+        print("Все опубликовалось успешно!")
 
 
 producer = Producer()

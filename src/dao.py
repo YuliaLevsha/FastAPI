@@ -27,7 +27,10 @@ class DAO:
     def update(self, params: Dict, data):
         document = self.get_one(params)
         new_data = {"$set": data}
-        self.collection.update_one(document, new_data)
+        if document:
+            self.collection.update_one(document, new_data)
+        else:
+            self.create_one(new_data)
 
     def delete(self, params: Dict):
         self.collection.delete_one(params)
