@@ -22,7 +22,7 @@ class DAO:
         return self.collection.find_one(params)
 
     def get_all(self, params: Dict) -> List[Dict]:
-        return self.collection.find(params)
+        return self.collection.find(params, {"_id": 0})
 
     def update(self, params: Dict, data):
         document = self.get_one(params)
@@ -31,3 +31,9 @@ class DAO:
 
     def delete(self, params: Dict):
         self.collection.delete_one(params)
+
+    def check_db(self):
+        if len(list(self.get_all({}))):
+            return True
+        else:
+            return False

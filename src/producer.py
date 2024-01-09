@@ -15,10 +15,11 @@ class Producer:
         await self.producer.start()
         try:
             for value in data:
-                value = dict(value)
+                value = dict(value)  # есть у стримеров еще одна дата!!!!!!   ИЗМЕНИТЬ
                 value["data_instance"] = value.get("data_instance").strftime(
                     "%Y-%m-%dT%H:%M:%S.%f"
                 )
+                print(value)
                 await self.producer.send_and_wait(
                     topic, value=value, partition=partition
                 )

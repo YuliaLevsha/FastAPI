@@ -17,6 +17,9 @@ async def scrapper_clothes(scraper: LamodaScraper = Depends()):
 
 
 @router.get("/get-clothes")
-def get_clothes():
-    consumer.get_from_kafka(dao, partition=0, param="clothes")
-    return {"Clothes:": "good"}
+async def get_clothes():
+    data = consumer.get_from_kafka(partition=0)
+    result = await consumer.mongo_redis(
+        docs=data, dao=dao, param="name", collection_name="clothes"
+    )
+    return {"Clothes:": result}
