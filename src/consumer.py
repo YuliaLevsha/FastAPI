@@ -18,9 +18,7 @@ class Consumer:
     def get_from_kafka(self, partition):
         docs = []
         for message in self.consumer:
-            print(message.partition == partition)
             if message.partition == partition:
-                print(message.value)
                 message = message.value
                 docs.append(message)
         return docs
@@ -29,17 +27,19 @@ class Consumer:
         if dao.check_db():
             for doc in docs:
                 params = {param: doc.get(param)}
-                dao.update(params, data=doc)
+                document_from_mongo = dao.get_one(params)
+                if document_from_mongo:
+                    dao.update(document_from_mongo, data=doc)
+                else:
+                    dao.create_one(doc)
             result_cache = await settings.cache.connect().get(collection_name)
             if not result_cache:
                 await settings.cache.connect().set(collection_name, str(docs), ex=1200)
                 result_cache = await settings.cache.connect().get(collection_name)
-            print("----Cache----")
             return result_cache
         else:
             dao.create_many(docs)
             await settings.cache.connect().set(collection_name, str(docs), ex=1200)
-            print("----Mongo----")
             return list(dao.get_all({}))
 
 

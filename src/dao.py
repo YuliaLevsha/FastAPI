@@ -24,13 +24,9 @@ class DAO:
     def get_all(self, params: Dict) -> List[Dict]:
         return self.collection.find(params, {"_id": 0})
 
-    def update(self, params: Dict, data):
-        document = self.get_one(params)
+    def update(self, document: Dict, data):
         new_data = {"$set": data}
-        if document:
-            self.collection.update_one(document, new_data)
-        else:
-            self.create_one(new_data)
+        self.collection.update_one(document, new_data)
 
     def delete(self, params: Dict):
         self.collection.delete_one(params)

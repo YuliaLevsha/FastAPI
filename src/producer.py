@@ -1,26 +1,27 @@
 from json import dumps
-from kafka import KafkaProducer
+from aiokafka import AIOKafkaProducer
 from src.config import settings
 from datetime import datetime
+import logging
 
 
 class Producer:
     def __init__(self):
-        self.producer = KafkaProducer(
+        self.producer = AIOKafkaProducer(
             bootstrap_servers=settings.kafka.bootstrap_service(),
             api_version="2.5.0",
             value_serializer=lambda x: dumps(x).encode("utf-8"),
         )
 
-    def add_to_kafka(self, topic, data, partition):
+    async def add_to_kafka(self, topic, data, partition):
+        await self.producer.start()
         for value in data:
             value = dict(value)
             for key in value:
                 if isinstance(value.get(key), datetime):
                     value[key] = value.get(key).strftime("%Y-%m-%dT%H:%M:%S.%f")
-            print(value)
-            self.producer.send(topic, value=value, partition=partition)
-        print("Все опубликовалось успешно!")
+            await self.producer.send(topic, value=value, partition=partition)
+        logging.info("Все опубликовалось успешно!")
 
 
 producer = Producer()
