@@ -19,6 +19,6 @@ async def exception_handler(request, exc):
     raise HTTPException(status_code=428, detail="Необходимо пропарсить данные!")
 
 
-@app.on_event('shutdown')
+@app.on_event("shutdown")
 async def close_producer():
     await producer.producer.stop()
