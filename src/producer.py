@@ -1,6 +1,8 @@
 from json import dumps
 from aiokafka import AIOKafkaProducer
 from src.config import settings
+from datetime import datetime
+import logging
 
 
 class Producer:
@@ -13,19 +15,13 @@ class Producer:
 
     async def add_to_kafka(self, topic, data, partition):
         await self.producer.start()
-        try:
-            for value in data:
-                value = dict(value)
-                value["data_instance"] = value.get("data_instance").strftime(
-                    "%Y-%m-%dT%H:%M:%S.%f"
-                )
-                await self.producer.send_and_wait(
-                    topic, value=value, partition=partition
-                )
-            await self.producer.flush()
-            print("Все опубликовалось успешно!")
-        finally:
-            await self.producer.stop()
+        for value in data:
+            value = dict(value)
+            for key in value:
+                if isinstance(value.get(key), datetime):
+                    value[key] = value.get(key).strftime("%Y-%m-%dT%H:%M:%S.%f")
+            await self.producer.send(topic, value=value, partition=partition)
+        logging.info("Все опубликовалось успешно!")
 
 
 producer = Producer()

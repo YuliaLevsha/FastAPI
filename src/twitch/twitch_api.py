@@ -29,21 +29,30 @@ async def scrapper_streamers(scraper: TwitchScraper = Depends()):
 
 
 @router.get("/get-games")
-def get_games():
+async def get_games():
     dao = DAO("games")
-    consumer.get_from_kafka(dao, partition=1, param="games")
-    return {"Games:": "good"}
+    data = consumer.get_from_kafka(partition=1)
+    result = await consumer.mongo_redis(
+        docs=data, dao=dao, param="name", collection_name="games"
+    )
+    return {"Games:": result}
 
 
 @router.get("/get-streams")
-def get_streams():
+async def get_streams():
     dao = DAO("streams")
-    consumer.get_from_kafka(dao, partition=2, param="streams")
-    return {"Streams:": "good"}
+    data = consumer.get_from_kafka(partition=2)
+    result = await consumer.mongo_redis(
+        docs=data, dao=dao, param="stream_name", collection_name="streams"
+    )
+    return {"Streams:": result}
 
 
 @router.get("/get-streamers")
-def get_streamers():
+async def get_streamers():
     dao = DAO("streamers")
-    consumer.get_from_kafka(dao, partition=3, param="streamers")
-    return {"Streamers:": "good"}
+    data = consumer.get_from_kafka(partition=3)
+    result = await consumer.mongo_redis(
+        docs=data, dao=dao, param="name", collection_name="streamers"
+    )
+    return {"Streamers:": result}

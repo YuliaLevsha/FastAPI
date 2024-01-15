@@ -15,17 +15,32 @@ class Consumer:
             value_deserializer=lambda x: loads(x.decode("utf-8")),
         )
 
-    def get_from_kafka(self, dao, partition, param):
+    def get_from_kafka(self, partition):
         docs = []
-        num = 1
-        if len(list(dao.get_all({}))) == 0:
-            for message in self.consumer:
-                if message.partition == partition:
-                    message = message.value
-                    dao.create_one(message)
-                    docs.append(message)
-                    print(message, " было добавлено в монго.", num)
-                    num += 1
+        for message in self.consumer:
+            if message.partition == partition:
+                message = message.value
+                docs.append(message)
+        return docs
+
+    async def mongo_redis(self, docs, dao, param, collection_name):
+        if dao.check_db():
+            for doc in docs:
+                params = {param: doc.get(param)}
+                document_from_mongo = dao.get_one(params)
+                if document_from_mongo:
+                    dao.update(document_from_mongo, data=doc)
+                else:
+                    dao.create_one(doc)
+            result_cache = await settings.cache.connect().get(collection_name)
+            if not result_cache:
+                await settings.cache.connect().set(collection_name, str(docs), ex=1200)
+                result_cache = await settings.cache.connect().get(collection_name)
+            return result_cache
+        else:
+            dao.create_many(docs)
+            await settings.cache.connect().set(collection_name, str(docs), ex=1200)
+            return list(dao.get_all({}))
 
 
 consumer = Consumer("parsing")
